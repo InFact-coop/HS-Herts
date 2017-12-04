@@ -6,8 +6,12 @@ import Html exposing (..)
 import Model exposing (..)
 import Routes.Home exposing (..)
 import Routes.Navbar exposing (..)
-import Routes.PageOne exposing (..)
-import Routes.PageTwo exposing (..)
+import Routes.StartVisitPage exposing (..)
+import Routes.EndVisitPage exposing (..)
+import Routes.AudioMessagePage exposing (..)
+import Routes.TextMessagePage exposing (..)
+import Routes.PreviousVisitsPage exposing (..)
+import Routes.NotFoundPage exposing (..)
 
 
 view : Model -> Html Msg
@@ -18,13 +22,25 @@ view model =
                 HomeRoute ->
                     home model
 
-                PageOneRoute ->
-                    pageOne model
+                StartVisitRoute ->
+                    startVisitPage model
 
-                PageTwoRoute ->
-                    pageTwo model
+                EndVisitRoute ->
+                    endVisitPage model
+
+                AudioMessageRoute ->
+                    audioMessagePage model
+
+                TextMessageRoute ->
+                    textMessagePage model
+
+                PreviousVisitsRoute ->
+                    previousVisitsPage model
+
+                NotFoundRoute ->
+                    notFoundPage model
     in
-    div []
-        [ navbar model
-        , page
-        ]
+        div []
+            [ navbar model
+            , page
+            ]
