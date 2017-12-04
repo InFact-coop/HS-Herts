@@ -12,6 +12,8 @@ initModel =
     , timerLength = 0
     , previousFeedback = []
     , feedback = Nothing
+    , isMenuOpen = False
+    , timerRunning = False
     }
 
 
@@ -35,6 +37,7 @@ type alias Model =
     , timerLength : Int
     , previousFeedback : List FeedBack
     , feedback : Maybe FeedBack
+    , isMenuOpen : Bool
     , timerRunning : Bool
     }
 
@@ -45,6 +48,7 @@ type alias Model =
 
 type Msg
     = UrlChange Navigation.Location
+    | ToggleMenu
     | IncrementTimer
     | StartTimer
     | StopTimer

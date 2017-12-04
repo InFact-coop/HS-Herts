@@ -12,3 +12,30 @@ body {
 button {
   font-family: var(--sans-serif);
 }
+
+.nav-link {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.icon {
+  display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+  .nav-link {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .nav-menu {
+    display: none;
+  }
+}
