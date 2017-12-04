@@ -9,19 +9,32 @@ import Navigation
 initModel : Model
 initModel =
     { route = HomeRoute
-    , userInput = ""
+    , timerLength = 0
+    , previousFeedback = []
+    , feedback = Nothing
     }
 
 
 type Route
     = HomeRoute
-    | PageOneRoute
-    | PageTwoRoute
+    | StartVisitRoute
+    | EndVisitRoute
+    | AudioMessageRoute
+    | TextMessageRoute
+    | PreviousVisitsRoute
+    | NotFoundRoute
+
+
+type FeedBack
+    = Audio String
+    | Text String
 
 
 type alias Model =
     { route : Route
-    , userInput : String
+    , timerLength : Int
+    , previousFeedback : List FeedBack
+    , feedback : Maybe FeedBack
     }
 
 
@@ -30,5 +43,4 @@ type alias Model =
 
 
 type Msg
-    = Change String
-    | UrlChange Navigation.Location
+    = UrlChange Navigation.Location

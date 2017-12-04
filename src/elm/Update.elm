@@ -12,21 +12,27 @@ getRoute hash =
         "#home" ->
             HomeRoute
 
-        "#pageone" ->
-            PageOneRoute
+        "#startVisitPage" ->
+            StartVisitRoute
 
-        "#pagetwo" ->
-            PageTwoRoute
+        "#endVisitPage" ->
+            EndVisitRoute
+
+        "#audioMessagePage" ->
+            AudioMessageRoute
+
+        "#textMessagePage" ->
+            TextMessageRoute
+
+        "#previousVisitPage" ->
+            PreviousVisitsRoute
 
         _ ->
-            HomeRoute
+            NotFoundRoute
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        Change newInput ->
-            ( { model | userInput = newInput }, Cmd.none )
-
         UrlChange location ->
             ( { model | route = getRoute location.hash }, Cmd.none )
