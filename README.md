@@ -1,44 +1,59 @@
-# elm-spa-boiler-plate
-A SPA boiler plate for elm projects
+# RSBC
+See our site __[here!!](http://rsbcApp.surge.sh/)__ :eyes: 
 
-## Stack
-#### Welcome to the ET Stack  
-![](https://media.giphy.com/media/gHcPh3ehbRGik/giphy.gif)
+## The Challenge
 
-**E**lm - for sweet :candy: functional code  
-**T**achyons - for speedy :dash: modular styling
 
-## Structure
-``` elm
-src/ -- contains elm code
-src/Routes/ -- contains Html Msgs for your pages && elements
-public/ -- contains built code, and an index.html file
-```
+## Our Solution?
 
-## Commands
-`npm run dev -- will start watching your elm project, and run a local dev
-server`
 
-`npm run build -- will build your elm project as a js file, ready to serve as a static site`
 
-## Routing
-Routing is done via a #url to avoid reloading the page and loosing model's state. There are workarounds for this, but this a simple solution that requires minimal code (_check resources below for alternatives_). The router works by using the `Navigation` package which gives us access to the url. Our app checks the current url address, updates this route in the `modal`, then renders the page according to the `modal.route`.
 
-All routing takes place in the ```Update.elm``` & ```View.elm``` files:
-- ```getPage``` in ```Update.elm``` acts as a virtual router, which gets the current url and sets it in model
-- the ```case``` statement in ```View.elm``` acts as a handler which serves the correct ```Html Msg```
+ **The aims of the solution**
 
-To add a new route you need to:
-1. Add a your route as a msg type in Route in `Type.elm`
-2. Create and export a ```Html Msg``` for the new page and place it in a separate file in ```Routes/```
-3. Add a ```case``` for the route in ```getPage```
-4. Serve the file by adding a ```case``` for the imported```Html Msg``` in ```view ```
 
-## Multiplicity
-To duplicate this repo for your own use follow [these gitHub instructions](https://help.github.com/articles/duplicating-a-repository/). And don't forget to :star: :star2: :star: to say thanks!
 
-## Resources
-This is a basic way of routing a SPA using [this tutorial](https://medium.com/@nithstong/spa-simple-with-elm-navigation-630bdfdbef94)
 
-Further reading on best practises and limitations can be found here:
-[Choosing Elm SPA architecture](https://medium.com/elm-shorts/choosing-the-right-elm-spa-architecture-d6e8275f6899)
+### Process 
+
+__User Stories__
+We began by aligning on the main user stories that were key to the success of the prototype. There were:
+
+
+__Prototype__  
+  
+We then built prototypes in Figma to help map the user journey more thoroughly.
+
+
+## Further Development
+### User Testing
+User testing allows you to get feedback from your primary users to check that the product being built fits their needs. This is __very__ important to build a successful product. 
+
+The three key points for testing are:
+- Have a script which has tasks for them to complete
+- Ask for people to give you a commentry of what they are doing, but don't response to them
+- Document their response
+
+Here are some useful resources to look at when completing your user testing sessions:
+- [Googles Gurilla Testing Advice](https://www.youtube.com/watch?v=0YL0xoSmyZI&feature=youtu.be)
+- [Script Guidance and Template](https://github.com/foundersandcoders/master-reference/blob/master/coursebook/weeks-10-12/user-testing.md#1-planning)
+
+Recommendations for user testing:
+
+
+### Next Sprint
+If this design is move forward for a build sprint it is important to concentrate on key features that both solves the initital problem and implements feedback from user testing.
+
+Our current recommendation for initial features would be:
+
+__and:__ 
+
+
+__or__ _*(depending on feedback from testing)*_:
+
+* Collect the inputs from quantative questions and automate sending the data back to LCN on a weekly basis
+
+
+
+### Presentation Feedback
+
