@@ -1,13 +1,11 @@
 module Main exposing (..)
 
-import Navigation
-
-
 -- My Elm Files
 
-import State exposing (..)
+import Model exposing (..)
+import Navigation
+import Update exposing (..)
 import View exposing (..)
-import Types exposing (..)
 
 
 main : Program Never Model Msg

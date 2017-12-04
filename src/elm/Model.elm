@@ -1,9 +1,16 @@
-module Types exposing (..)
+module Model exposing (..)
 
 import Navigation
 
 
 -- Model
+
+
+initModel : Model
+initModel =
+    { route = HomeRoute
+    , userInput = ""
+    }
 
 
 type Route

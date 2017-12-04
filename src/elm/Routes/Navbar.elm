@@ -2,7 +2,7 @@ module Routes.Navbar exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Types exposing (..)
+import Model exposing (..)
 
 
 navbar : Model -> Html Msg

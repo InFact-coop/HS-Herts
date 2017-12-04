@@ -1,17 +1,6 @@
-module State exposing (..)
+module Update exposing (..)
 
-import Types exposing (..)
-
-
--- MODEL
-
-
-initModel : Model
-initModel =
-    { route = HomeRoute
-    , userInput = ""
-    }
-
+import Model exposing (..)
 
 
 --UPDATE
@@ -40,4 +29,4 @@ update msg model =
             ( { model | userInput = newInput }, Cmd.none )
 
         UrlChange location ->
-            ( { model | route = (getRoute location.hash) }, Cmd.none )
+            ( { model | route = getRoute location.hash }, Cmd.none )

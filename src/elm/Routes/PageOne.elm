@@ -2,7 +2,7 @@ module Routes.PageOne exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Types exposing (..)
+import Model exposing (..)
 
 
 pageOne : Model -> Html Msg
