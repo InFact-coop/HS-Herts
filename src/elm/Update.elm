@@ -42,3 +42,17 @@ update msg model =
 
         ToggleMenu ->
             ( { model | isMenuOpen = not model.isMenuOpen }, Cmd.none )
+
+        IncrementTimer ->
+            ( { model | timerLength = model.timerLength + 1 }, Cmd.none )
+
+        StartTimer ->
+            ( { model | timerRunning = True }, Cmd.none )
+
+        StopTimer ->
+            ( { model
+                | timerRunning = False
+                , route = EndVisitRoute
+              }
+            , Cmd.none
+            )
