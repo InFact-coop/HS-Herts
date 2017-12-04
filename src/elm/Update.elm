@@ -39,3 +39,6 @@ update msg model =
     case msg of
         UrlChange location ->
             ( { model | route = getRoute location.hash }, Cmd.none )
+
+        ToggleMenu ->
+            ( { model | isMenuOpen = not model.isMenuOpen }, Cmd.none )
