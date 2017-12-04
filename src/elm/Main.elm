@@ -4,6 +4,7 @@ module Main exposing (..)
 
 import Model exposing (..)
 import Navigation
+import Subscriptions exposing (..)
 import Update exposing (..)
 import View exposing (..)
 
@@ -14,5 +15,5 @@ main =
         { init = always ( initModel, Cmd.none )
         , view = view
         , update = update
-        , subscriptions = always Sub.none
+        , subscriptions = subscriptions
         }

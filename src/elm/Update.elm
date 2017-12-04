@@ -24,7 +24,7 @@ getRoute hash =
         "#textMessagePage" ->
             TextMessageRoute
 
-        "#previousVisitPage" ->
+        "#previousVisitsPage" ->
             PreviousVisitsRoute
 
         _ ->
@@ -36,3 +36,17 @@ update msg model =
     case msg of
         UrlChange location ->
             ( { model | route = getRoute location.hash }, Cmd.none )
+
+        IncrementTimer ->
+            ( { model | timerLength = model.timerLength + 1 }, Cmd.none )
+
+        StartTimer ->
+            ( { model | timerRunning = True }, Cmd.none )
+
+        StopTimer ->
+            ( { model
+                | timerRunning = False
+                , route = EndVisitRoute
+              }
+            , Cmd.none
+            )
