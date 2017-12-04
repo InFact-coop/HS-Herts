@@ -9,6 +9,9 @@ import Model exposing (..)
 getRoute : String -> Route
 getRoute hash =
     case hash of
+        "" ->
+            HomeRoute
+
         "#home" ->
             HomeRoute
 
