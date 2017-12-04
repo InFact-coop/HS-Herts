@@ -7,11 +7,7 @@ See our site __[here!!]()__ :eyes:
 ## Our Solution?
 
 
-
-
  **The aims of the solution**
-
-
 
 
 ### Process 
