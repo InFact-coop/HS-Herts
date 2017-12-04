@@ -24,7 +24,7 @@ getRoute hash =
         "#textMessagePage" ->
             TextMessageRoute
 
-        "#previousVisitPage" ->
+        "#previousVisitsPage" ->
             PreviousVisitsRoute
 
         _ ->
