@@ -35,6 +35,7 @@ type alias Model =
     , timerLength : Int
     , previousFeedback : List FeedBack
     , feedback : Maybe FeedBack
+    , timerRunning : Bool
     }
 
 
@@ -44,3 +45,6 @@ type alias Model =
 
 type Msg
     = UrlChange Navigation.Location
+    | IncrementTimer
+    | StartTimer
+    | StopTimer
