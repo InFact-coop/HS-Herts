@@ -9,7 +9,7 @@ import Model exposing (..)
 startVisitPage : Model -> Html Msg
 startVisitPage model =
     div [ class "w-60-ns center" ]
-        [ h1 [ class "tc f1" ] [ text "Timer" ]
+        [ img [ class "center pt5 h5 ma0", src "./assets/logo.png" ] []
         , p [ class "f3 w60 mh1 tc" ] [ text <| convertToMin model.timerLength ]
         , button [ onClick StartTimer ] [ text "Start" ]
         , button [ onClick StopTimer ] [ text "Stop" ]
@@ -25,4 +25,4 @@ convertToMin number =
         seconds =
             number % 60
     in
-    toString minutes ++ " minutes " ++ toString seconds ++ " seconds"
+        toString minutes ++ " minutes " ++ toString seconds ++ " seconds"

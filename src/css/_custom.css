@@ -13,35 +13,10 @@ button {
   font-family: var(--sans-serif);
 }
 
-.nav-link {
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.icon {
-  display: none;
-}
-
-@media screen and (max-width: 600px) {
-  .nav-link {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .nav-menu {
-    display: none;
-  }
-}
-
 .startVisit {
   border: 2px solid var(--brand-orange);
-  border-radius: 2rem;;
+  border-radius: 2rem;
+  ;
   width: 13rem;
   height: 4.5rem;
 }
@@ -66,7 +41,7 @@ button {
 }
 
 .f3 {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
 }
 
 .main {
@@ -74,4 +49,11 @@ button {
   min-width: 375px;
   max-height: 736px;
   max-width: 414px;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .main {
+    width: 100%;
+    overflow: hidden;
+  }
 }
