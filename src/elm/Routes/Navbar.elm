@@ -8,7 +8,7 @@ import Model exposing (..)
 
 navbar : Model -> Html Msg
 navbar model =
-    div [ class <| "topnav overflow-hidden" ]
+    div [ class <| "dn topnav overflow-hidden" ]
         [ ul [ class "dib ma0 bg-green w-100 pa2 topnav" ]
             (navbarContent ++ (navbarMenu model))
         ]

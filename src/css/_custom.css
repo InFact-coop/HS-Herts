@@ -14,19 +14,18 @@ button {
 }
 
 .nav-link {
-    float: right;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 .icon {
   display: none;
 }
-
 
 @media screen and (max-width: 600px) {
   .nav-link {
@@ -38,4 +37,41 @@ button {
   .nav-menu {
     display: none;
   }
+}
+
+.startVisit {
+  border: 2px solid var(--brand-orange);
+  border-radius: 2rem;;
+  width: 13rem;
+  height: 4.5rem;
+}
+
+.prevVisits {
+  width: 13rem;
+  height: 4.5rem;
+  border: 2px solid var(--brand-pink);
+  border-radius: 2rem;
+}
+
+.brand {
+  color: var(--brand-orange);
+}
+
+.brand-pink {
+  color: var(--brand-pink);
+}
+
+.logo {
+  width: 13.13rem;
+}
+
+.f3 {
+  font-size: 1.4rem;
+}
+
+.main {
+  min-height: 667px;
+  min-width: 375px;
+  max-height: 736px;
+  max-width: 414px;
 }
