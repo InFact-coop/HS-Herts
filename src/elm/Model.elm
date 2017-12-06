@@ -11,17 +11,18 @@ initModel =
     { route = HomeRoute
     , timerLength = 0
     , previousFeedback = listOfFeedbacks
-    , feedback = Nothing
+    , feedback = Feedback Nothing Nothing 0
     , isMenuOpen = False
     , timerRunning = False
+    , isRecordingAudio = False
     }
 
 
-listOfFeedbacks : List FeedBack
+listOfFeedbacks : List Feedback
 listOfFeedbacks =
-    [ FeedBack (Just "Good visit") Nothing 3
-    , FeedBack (Just "The dad was not there") Nothing 3
-    , FeedBack (Just "They offered me a cup of tea") Nothing 5
+    [ Feedback (Just "Good visit") Nothing 3
+    , Feedback (Just "The dad was not there") Nothing 3
+    , Feedback (Just "They offered me a cup of tea") Nothing 5
     ]
 
 
@@ -37,7 +38,7 @@ type Route
     | NotFoundRoute
 
 
-type alias FeedBack =
+type alias Feedback =
     { text : Maybe String
     , audio : Maybe String
     , lengthOfVisit : Int
@@ -47,10 +48,11 @@ type alias FeedBack =
 type alias Model =
     { route : Route
     , timerLength : Int
-    , previousFeedback : List FeedBack
-    , feedback : Maybe FeedBack
+    , previousFeedback : List Feedback
+    , feedback : Feedback
     , isMenuOpen : Bool
     , timerRunning : Bool
+    , isRecordingAudio : Bool
     }
 
 
@@ -64,3 +66,6 @@ type Msg
     | IncrementTimer
     | StartVisit
     | StopVisit
+    | RecieveAudio String
+    | StartAudio
+    | StopAudio
