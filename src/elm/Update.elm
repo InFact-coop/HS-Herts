@@ -61,16 +61,16 @@ update msg model =
                 command =
                     Navigation.newUrl "#startVisitPage"
             in
-                ( { model | timerRunning = True, route = StartVisitRoute }, command )
+            ( { model | timerRunning = True, route = StartVisitRoute }, command )
 
         StopVisit ->
             let
                 command =
-                    Navigation.newUrl "#stopVisitQuestionPage"
+                    Navigation.newUrl "#stopVisitPage"
             in
-                ( { model
-                    | timerRunning = False
-                    , route = StopVisitQuestionRoute
-                  }
-                , command
-                )
+            ( { model
+                | timerRunning = False
+                , route = StopVisitRoute
+              }
+            , command
+            )
