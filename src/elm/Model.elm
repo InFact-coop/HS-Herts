@@ -20,7 +20,7 @@ initModel =
 type Route
     = HomeRoute
     | StartVisitRoute
-    | EndVisitRoute
+    | StopVisitRoute
     | AudioMessageRoute
     | TextMessageRoute
     | PreviousVisitsRoute
@@ -30,6 +30,7 @@ type Route
 type alias FeedBack =
     { text : String
     , audio : String
+    , lengthOfVisit : Int
     }
 
 
@@ -51,5 +52,5 @@ type Msg
     = UrlChange Navigation.Location
     | ToggleMenu
     | IncrementTimer
-    | StartTimer
-    | StopTimer
+    | StartVisit
+    | StopVisit
