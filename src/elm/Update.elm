@@ -98,3 +98,13 @@ update msg model =
 
         StopAudio ->
             ( { model | isRecordingAudio = False }, recordStop () )
+
+        UpdateTextFeedback textFeedback ->
+            let
+                feedback =
+                    model.feedback
+
+                newFeedback =
+                    { feedback | text = Just textFeedback }
+            in
+            ( { model | feedback = newFeedback }, Cmd.none )

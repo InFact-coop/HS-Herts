@@ -62,3 +62,4 @@ type Msg
     | RecieveAudio String
     | StartAudio
     | StopAudio
+    | UpdateTextFeedback String
