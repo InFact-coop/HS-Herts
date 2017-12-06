@@ -2,6 +2,7 @@ module Update exposing (..)
 
 import Model exposing (..)
 import Navigation exposing (..)
+import Subscriptions exposing (..)
 
 
 --UPDATE
@@ -52,16 +53,29 @@ update msg model =
                 command =
                     Navigation.newUrl "#startVisitPage"
             in
-            ( { model | timerRunning = True, route = StartVisitRoute }, command )
+                ( { model | timerRunning = True, route = StartVisitRoute }, command )
 
         StopVisit ->
             let
                 command =
                     Navigation.newUrl "#stopVisitPage"
             in
-            ( { model
-                | timerRunning = False
-                , route = StopVisitRoute
-              }
-            , command
-            )
+                ( { model
+                    | timerRunning = False
+                    , route = StopVisitRoute
+                  }
+                , command
+                )
+
+        RecieveAudio audioUrl ->
+            let
+                feedback =
+                    model.feedback
+
+                newFeedback =
+                    { feedback | audio = audioUrl }
+            in
+                ( { model | feedback = newFeedback }, Cmd.none )
+
+        StartAudio ->
+            ( model, recordStart () )

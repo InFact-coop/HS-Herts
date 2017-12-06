@@ -11,7 +11,7 @@ initModel =
     { route = HomeRoute
     , timerLength = 0
     , previousFeedback = []
-    , feedback = Nothing
+    , feedback = Feedback "" "" 0
     , isMenuOpen = False
     , timerRunning = False
     }
@@ -27,7 +27,7 @@ type Route
     | NotFoundRoute
 
 
-type alias FeedBack =
+type alias Feedback =
     { text : String
     , audio : String
     , lengthOfVisit : Int
@@ -37,8 +37,8 @@ type alias FeedBack =
 type alias Model =
     { route : Route
     , timerLength : Int
-    , previousFeedback : List FeedBack
-    , feedback : Maybe FeedBack
+    , previousFeedback : List Feedback
+    , feedback : Feedback
     , isMenuOpen : Bool
     , timerRunning : Bool
     }
@@ -54,3 +54,5 @@ type Msg
     | IncrementTimer
     | StartVisit
     | StopVisit
+    | RecieveAudio String
+    | StartAudio
