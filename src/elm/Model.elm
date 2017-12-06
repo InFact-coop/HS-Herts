@@ -77,3 +77,5 @@ type Msg
     | StartAudio
     | StopAudio
     | SelectVisitItem Feedback
+    | UpdateTextFeedback String
+    | FinishFeedback

@@ -105,3 +105,33 @@ update msg model =
                     Navigation.newUrl "#previousVisitsItemPage"
             in
                 ( { model | liveFeedback = currentFeedback }, command )
+
+        UpdateTextFeedback textFeedback ->
+            let
+                feedback =
+                    model.feedback
+
+                newFeedback =
+                    { feedback | text = Just textFeedback }
+            in
+                ( { model | feedback = newFeedback }, Cmd.none )
+
+        FinishFeedback ->
+            let
+                command =
+                    Navigation.newUrl "#thankyouPage"
+
+                resetFb =
+                    Feedback Nothing Nothing 0
+
+                updatedFeedbackList =
+                    [ model.feedback ] ++ model.previousFeedback
+            in
+                ( { model
+                    | feedback = resetFb
+                    , route = ThankyouRoute
+                    , previousFeedback = updatedFeedbackList
+                    , timerLength = 0
+                  }
+                , command
+                )

@@ -14,5 +14,5 @@ stopVisitPage model =
             [ a [ href "#audioMessagePage", class "pa2 link dim" ] [ text "record Audio" ]
             , a [ href "#textMessagePage", class "pa2 link dim" ] [ text "write message" ]
             ]
-        , a [ href "#thankyouPage" ] [ button [] [ text "Finish" ] ]
+        , button [ onClick FinishFeedback ] [ text "Finish" ]
         ]
