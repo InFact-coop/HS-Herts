@@ -4,15 +4,17 @@ module View exposing (..)
 
 import Html exposing (..)
 import Model exposing (..)
+import Routes.AudioMessagePage exposing (..)
 import Routes.Home exposing (..)
 import Routes.Navbar exposing (..)
+import Routes.NotFoundPage exposing (..)
+import Routes.PreviousVisitsPage exposing (..)
 import Routes.StartVisitPage exposing (..)
 import Routes.EndVisitQuestionPage exposing (..)
-import Routes.EndVisitPage exposing (..)
+import Routes.StopVisitPage exposing (..)
 import Routes.AudioMessagePage exposing (..)
 import Routes.TextMessagePage exposing (..)
-import Routes.PreviousVisitsPage exposing (..)
-import Routes.NotFoundPage exposing (..)
+import Routes.ThankyouPage exposing (..)
 
 
 view : Model -> Html Msg
@@ -29,8 +31,8 @@ view model =
                 EndVisitQuestionRoute ->
                     endVisitQuestionPage model
 
-                EndVisitRoute ->
-                    endVisitPage model
+                StopVisitRoute ->
+                    stopVisitPage model
 
                 AudioMessageRoute ->
                     audioMessagePage model
@@ -40,6 +42,9 @@ view model =
 
                 PreviousVisitsRoute ->
                     previousVisitsPage model
+
+                ThankyouRoute ->
+                    thankyouPage model
 
                 NotFoundRoute ->
                     notFoundPage model

@@ -1,6 +1,7 @@
 module Update exposing (..)
 
 import Model exposing (..)
+import Navigation exposing (..)
 
 
 --UPDATE
@@ -21,8 +22,8 @@ getRoute hash =
         "#endVisitQuestionPage" ->
             EndVisitQuestionRoute
 
-        "#endVisitPage" ->
-            EndVisitRoute
+        "#stopVisitPage" ->
+            StopVisitRoute
 
         "#audioMessagePage" ->
             AudioMessageRoute
@@ -32,6 +33,9 @@ getRoute hash =
 
         "#previousVisitsPage" ->
             PreviousVisitsRoute
+
+        "#thankyouPage" ->
+            ThankyouRoute
 
         _ ->
             NotFoundRoute
@@ -49,13 +53,21 @@ update msg model =
         IncrementTimer ->
             ( { model | timerLength = model.timerLength + 1 }, Cmd.none )
 
-        StartTimer ->
-            ( { model | timerRunning = True }, Cmd.none )
+        StartVisit ->
+            let
+                command =
+                    Navigation.newUrl "#startVisitPage"
+            in
+                ( { model | timerRunning = True, route = StartVisitRoute }, command )
 
-        StopTimer ->
-            ( { model
-                | timerRunning = False
-                , route = EndVisitQuestionRoute
-              }
-            , Cmd.none
-            )
+        StopVisit ->
+            let
+                command =
+                    Navigation.newUrl "#stopVisitPage"
+            in
+                ( { model
+                    | timerRunning = False
+                    , route = EndVisitQuestionRoute
+                  }
+                , command
+                )
