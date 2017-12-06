@@ -59,3 +59,4 @@ type Msg
     | StopVisit
     | RecieveAudio String
     | StartAudio
+    | StopAudio

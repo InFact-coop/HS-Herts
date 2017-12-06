@@ -1,44 +1,31 @@
 if (navigator.mediaDevices) {
-  console.log('getUserMedia supported.');
-  console.log('App: ', app);
+  var mediaRecorder
 
-  var constraints = {
-    audio: true
-  };
-  var chunks = [];
-  var mediaRecorder;
-
+  // listen to elm
   app.ports.recordStart.subscribe(function() {
+    var constraints = { audio: true }
     navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
-      mediaRecorder = new MediaRecorder(stream);
-      mediaRecorder.start();
-      console.log(mediaRecorder.state);
-      console.log('recorder started');
-
-      mediaRecorder.onstop = function(e) {
-        console.log('data available after MediaRecorder.stop() called.');
-
-        var blob = new Blob(chunks, { type: 'audio/ogg; codecs=opus' });
-        chunks = [];
-        // jstoelm
-        var audioURL = window.URL.createObjectURL(blob);
-        console.log('blob', blob);
-        app.ports.audioUrl.send(audioURL);
-        console.log('AudioURL: ', audioURL);
-        console.log('recorder stopped');
-      };
+      var chunks = []
+      mediaRecorder = new MediaRecorder(stream)
+      mediaRecorder.start()
 
       mediaRecorder.ondataavailable = function(e) {
-        chunks.push(e.data);
-      };
-    });
-  });
+        chunks.push(e.data)
+      }
 
+      mediaRecorder.onstop = function(e) {
+        var blob = new Blob(chunks, { type: 'audio/ogg; codecs=opus' })
+        var audioURL = window.URL.createObjectURL(blob)
+        // send to elm
+        app.ports.audioUrl.send(audioURL)
+      }
+    })
+  })
+
+  // listen to elm
   app.ports.recordStop.subscribe(function() {
     if (mediaRecorder) {
-      mediaRecorder.stop();
+      mediaRecorder.stop()
     }
-    console.log(mediaRecorder.state);
-    console.log('recorder stopped');
-  });
+  })
 }
