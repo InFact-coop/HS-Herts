@@ -19,6 +19,9 @@ getRoute hash =
         "#startVisitPage" ->
             StartVisitRoute
 
+        "#stopVisitQuestionPage" ->
+            StopVisitQuestionRoute
+
         "#stopVisitPage" ->
             StopVisitRoute
 
@@ -30,6 +33,12 @@ getRoute hash =
 
         "#previousVisitsPage" ->
             PreviousVisitsRoute
+
+        "#thankyouPage" ->
+            ThankyouRoute
+
+        "listOfVisitsPage" ->
+            ListOfVisitsRoute
 
         _ ->
             NotFoundRoute
