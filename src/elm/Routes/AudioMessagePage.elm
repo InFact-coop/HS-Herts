@@ -10,5 +10,5 @@ audioMessagePage : Model -> Html Msg
 audioMessagePage model =
     div [ class "w-60-ns center" ]
         [ p [ class "f3 w60 mh1 tc" ] [ text "Recording..." ]
-        , button [ onClick StopVisit ] [ text "Done" ]
+        , a [ href "#stopVisitPage" ] [ button [] [ text "Done" ] ]
         ]
