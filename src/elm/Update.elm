@@ -122,7 +122,7 @@ update msg model =
                     Navigation.newUrl "#thankyouPage"
 
                 resetFb =
-                    Feedback Nothing Nothing 0
+                    Feedback "" model.feedbackCount Nothing Nothing 0
 
                 updatedFeedbackList =
                     [ model.feedback ] ++ model.previousFeedback
@@ -131,6 +131,7 @@ update msg model =
                     | feedback = resetFb
                     , route = ThankyouRoute
                     , previousFeedback = updatedFeedbackList
+                    , feedbackCount = model.feedbackCount + 1
                     , timerLength = 0
                   }
                 , command
