@@ -27,9 +27,10 @@ type Route
     | NotFoundRoute
 
 
-type FeedBack
-    = Audio String
-    | Text String
+type alias FeedBack =
+    { text : String
+    , audio : String
+    }
 
 
 type alias Model =
