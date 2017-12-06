@@ -30,6 +30,7 @@ type Route
 type alias FeedBack =
     { text : String
     , audio : String
+    , lengthOfVisit : Int
     }
 
 

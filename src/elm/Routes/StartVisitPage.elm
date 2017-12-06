@@ -1,5 +1,6 @@
 module Routes.StartVisitPage exposing (..)
 
+import Helpers.ConvertToMin exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
@@ -13,15 +14,3 @@ startVisitPage model =
         , p [ class "f3 w60 mh1 tc" ] [ text <| convertToMin model.timerLength ]
         , button [ onClick StopVisit ] [ text "Stop" ]
         ]
-
-
-convertToMin : Int -> String
-convertToMin number =
-    let
-        minutes =
-            number // 60
-
-        seconds =
-            number % 60
-    in
-    toString minutes ++ " minutes " ++ toString seconds ++ " seconds"
