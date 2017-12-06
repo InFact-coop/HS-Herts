@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="69px" height="67px" viewBox="0 0 69 67" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>heart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Artboard-2" transform="translate(-29.000000, -19.000000)" stroke="#FFFFFF" stroke-width="2">
+            <g id="favourite-28" transform="translate(30.000000, 20.000000)">
+                <path d="M58.2891876,38.2995032 C63.2649587,31.5165357 67,24.3914392 67,18.2857143 C67,8.22857143 58.7772727,0 48.7272727,0 L48.7272727,0 C42.3318182,0 36.6977273,3.2 33.5,8.22857143 C30.3022727,3.2 24.6681818,0 18.2727273,0 C8.22272727,0 0,8.22857143 0,18.2857143 C0,36.5714286 33.5,64 33.5,64 C33.5,64 35.3090518,62.5188147 38.086372,60.0153792" id="Shape"></path>
+                <polygon id="Shape" points="51 40 54.708 47.5709404 63 48.7846487 57 54.6778603 58.416 63 51 59.0716961 43.584 63 45 54.6778603 39 48.7846487 47.292 47.5709404"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -9,6 +9,6 @@ import Model exposing (..)
 notFoundPage : Model -> Html Msg
 notFoundPage model =
     div [ class "w-60-ns center" ]
-        [ h1 [ class "tc f1" ] [ text "not Found" ]
+        [ h1 [ class "center tc f1" ] [ text "404 not Found" ]
         , p [ class "f3 w60 mh1 tc" ] [ text "sorry wrong address!" ]
         ]

@@ -12,6 +12,8 @@ initModel =
     , timerLength = 0
     , previousFeedback = []
     , feedback = Nothing
+    , isMenuOpen = False
+    , timerRunning = False
     }
 
 
@@ -25,9 +27,10 @@ type Route
     | NotFoundRoute
 
 
-type FeedBack
-    = Audio String
-    | Text String
+type alias FeedBack =
+    { text : String
+    , audio : String
+    }
 
 
 type alias Model =
@@ -35,6 +38,7 @@ type alias Model =
     , timerLength : Int
     , previousFeedback : List FeedBack
     , feedback : Maybe FeedBack
+    , isMenuOpen : Bool
     , timerRunning : Bool
     }
 
@@ -45,6 +49,7 @@ type alias Model =
 
 type Msg
     = UrlChange Navigation.Location
+    | ToggleMenu
     | IncrementTimer
     | StartTimer
     | StopTimer

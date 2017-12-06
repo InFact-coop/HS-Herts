@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="24px" viewBox="0 0 20 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>mic-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Group-2" stroke="#E05206" stroke-width="2">
+            <g id="mic-2" transform="translate(1.000000, 1.000000)">
+                <path d="M15,13 L15,14 C15,17.314 12.314,20 9,20 L9,20 C5.686,20 3,17.314 3,14 L3,13" id="Shape"></path>
+                <path d="M0,13 L18,13" id="Shape"></path>
+                <path d="M9,22 L9,20" id="Shape"></path>
+                <path d="M3,9 L3,6 C3,2.686 5.686,0 9,0 L9,0 C12.314,0 15,2.686 15,6 L15,9" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
