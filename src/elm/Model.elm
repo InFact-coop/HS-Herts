@@ -20,12 +20,13 @@ initModel =
 type Route
     = HomeRoute
     | StartVisitRoute
-    | EndVisitQuestionRoute
+    | StopVisitQuestionRoute
     | StopVisitRoute
     | AudioMessageRoute
     | TextMessageRoute
     | PreviousVisitsRoute
     | ThankyouRoute
+    | ListOfVisitsRoute
     | NotFoundRoute
 
 
