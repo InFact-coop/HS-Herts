@@ -12,7 +12,7 @@ previousVisitsPage model =
         ([ h1 [ class "tc f1" ] [ text "Your visits" ] ] ++ visitContent model)
 
 
-visitItem : FeedBack -> Html Msg
+visitItem : Feedback -> Html Msg
 visitItem feedback =
     let
         visitDescription =
