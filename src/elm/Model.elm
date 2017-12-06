@@ -25,6 +25,7 @@ type Route
     | AudioMessageRoute
     | TextMessageRoute
     | PreviousVisitsRoute
+    | ThankyouRoute
     | NotFoundRoute
 
 
