@@ -68,9 +68,16 @@ update msg model =
             let
                 command =
                     Navigation.newUrl "#stopVisitPage"
+
+                feedback =
+                    model.feedback
+
+                newFeedback =
+                    { feedback | lengthOfVisit = model.timerLength }
             in
             ( { model
                 | timerRunning = False
+                , feedback = newFeedback
                 , route = StopVisitRoute
               }
             , command
@@ -82,12 +89,12 @@ update msg model =
                     model.feedback
 
                 newFeedback =
-                    { feedback | audio = audioUrl }
+                    { feedback | audio = Just audioUrl }
             in
             ( { model | feedback = newFeedback }, Cmd.none )
 
         StartAudio ->
-            ( model, recordStart () )
+            ( { model | isRecordingAudio = True }, recordStart () )
 
         StopAudio ->
-            ( model, recordStop () )
+            ( { model | isRecordingAudio = False }, recordStop () )
