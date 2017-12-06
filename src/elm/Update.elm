@@ -18,6 +18,9 @@ getRoute hash =
         "#startVisitPage" ->
             StartVisitRoute
 
+        "#endVisitQuestionPage" ->
+            EndVisitQuestionRoute
+
         "#endVisitPage" ->
             EndVisitRoute
 
@@ -52,7 +55,7 @@ update msg model =
         StopTimer ->
             ( { model
                 | timerRunning = False
-                , route = EndVisitRoute
+                , route = EndVisitQuestionRoute
               }
             , Cmd.none
             )

@@ -7,6 +7,7 @@ import Model exposing (..)
 import Routes.Home exposing (..)
 import Routes.Navbar exposing (..)
 import Routes.StartVisitPage exposing (..)
+import Routes.EndVisitQuestionPage exposing (..)
 import Routes.EndVisitPage exposing (..)
 import Routes.AudioMessagePage exposing (..)
 import Routes.TextMessagePage exposing (..)
@@ -24,6 +25,9 @@ view model =
 
                 StartVisitRoute ->
                     startVisitPage model
+
+                EndVisitQuestionRoute ->
+                    endVisitQuestionPage model
 
                 EndVisitRoute ->
                     endVisitPage model
