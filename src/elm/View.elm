@@ -15,7 +15,6 @@ import Routes.StopVisitPage exposing (..)
 import Routes.AudioMessagePage exposing (..)
 import Routes.TextMessagePage exposing (..)
 import Routes.ThankyouPage exposing (..)
-import Routes.ListOfVisitsPage exposing (..)
 
 
 view : Model -> Html Msg
@@ -46,9 +45,6 @@ view model =
 
                 ThankyouRoute ->
                     thankyouPage model
-
-                ListOfVisitsRoute ->
-                    listOfVisitsPage model
 
                 NotFoundRoute ->
                     notFoundPage model

@@ -10,11 +10,19 @@ initModel : Model
 initModel =
     { route = HomeRoute
     , timerLength = 0
-    , previousFeedback = []
+    , previousFeedback = listOfFeedbacks
     , feedback = Nothing
     , isMenuOpen = False
     , timerRunning = False
     }
+
+
+listOfFeedbacks : List FeedBack
+listOfFeedbacks =
+    [ FeedBack (Just "Good visit") Nothing 3
+    , FeedBack (Just "The dad was not there") Nothing 3
+    , FeedBack (Just "They offered me a cup of tea") Nothing 5
+    ]
 
 
 type Route
@@ -26,13 +34,12 @@ type Route
     | TextMessageRoute
     | PreviousVisitsRoute
     | ThankyouRoute
-    | ListOfVisitsRoute
     | NotFoundRoute
 
 
 type alias FeedBack =
-    { text : String
-    , audio : String
+    { text : Maybe String
+    , audio : Maybe String
     , lengthOfVisit : Int
     }
 

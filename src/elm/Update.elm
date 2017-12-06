@@ -37,9 +37,6 @@ getRoute hash =
         "#thankyouPage" ->
             ThankyouRoute
 
-        "listOfVisitsPage" ->
-            ListOfVisitsRoute
-
         _ ->
             NotFoundRoute
 
@@ -61,16 +58,16 @@ update msg model =
                 command =
                     Navigation.newUrl "#startVisitPage"
             in
-            ( { model | timerRunning = True, route = StartVisitRoute }, command )
+                ( { model | timerRunning = True, route = StartVisitRoute }, command )
 
         StopVisit ->
             let
                 command =
                     Navigation.newUrl "#stopVisitPage"
             in
-            ( { model
-                | timerRunning = False
-                , route = StopVisitRoute
-              }
-            , command
-            )
+                ( { model
+                    | timerRunning = False
+                    , route = StopVisitRoute
+                  }
+                , command
+                )
