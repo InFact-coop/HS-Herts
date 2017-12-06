@@ -63,3 +63,4 @@ type Msg
     | StartAudio
     | StopAudio
     | UpdateTextFeedback String
+    | FinishFeedback
