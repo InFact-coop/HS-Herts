@@ -8,7 +8,8 @@ import Routes.AudioMessagePage exposing (..)
 import Routes.Home exposing (..)
 import Routes.Navbar exposing (..)
 import Routes.NotFoundPage exposing (..)
-import Routes.PreviousVisitsPage exposing (..)
+import Routes.PreviousVisitsOverviewPage exposing (..)
+import Routes.PreviousVisitsItemPage exposing (..)
 import Routes.StartVisitPage exposing (..)
 import Routes.StopVisitQuestionPage exposing (..)
 import Routes.StopVisitPage exposing (..)
@@ -40,8 +41,11 @@ view model =
                 TextMessageRoute ->
                     textMessagePage model
 
-                PreviousVisitsRoute ->
-                    previousVisitsPage model
+                PreviousVisitsOverviewRoute ->
+                    previousVisitsOverviewPage model
+
+                PreviousVisitsItemRoute ->
+                    previousVisitsItemPage model
 
                 ThankyouRoute ->
                     thankyouPage model

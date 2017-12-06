@@ -32,8 +32,11 @@ getRoute hash =
         "#textMessagePage" ->
             TextMessageRoute
 
-        "#previousVisitsPage" ->
-            PreviousVisitsRoute
+        "#previousVisitsOverviewPage" ->
+            PreviousVisitsOverviewRoute
+
+        "#previousVisitsItemPage" ->
+            PreviousVisitsItemRoute
 
         "#thankyouPage" ->
             ThankyouRoute
@@ -72,14 +75,13 @@ update msg model =
                 newFeedback =
                     { feedback | lengthOfVisit = model.timerLength }
             in
-
-            ( { model
-                | timerRunning = False
-                , feedback = newFeedback
-                , route = StopVisitRoute
-              }
-            , command
-            )
+                ( { model
+                    | timerRunning = False
+                    , feedback = newFeedback
+                    , route = StopVisitRoute
+                  }
+                , command
+                )
 
         RecieveAudio audioUrl ->
             let
@@ -89,7 +91,7 @@ update msg model =
                 newFeedback =
                     { feedback | audio = Just audioUrl }
             in
-            ( { model | feedback = newFeedback }, Cmd.none )
+                ( { model | feedback = newFeedback }, Cmd.none )
 
         StartAudio ->
             ( { model | isRecordingAudio = True }, recordStart () )
@@ -97,3 +99,9 @@ update msg model =
         StopAudio ->
             ( { model | isRecordingAudio = False }, recordStop () )
 
+        SelectVisitItem currentFeedback ->
+            let
+                command =
+                    Navigation.newUrl "#previousVisitsItemPage"
+            in
+                ( { model | liveFeedback = currentFeedback }, command )
