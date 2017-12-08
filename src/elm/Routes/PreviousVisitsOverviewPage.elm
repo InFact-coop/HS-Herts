@@ -8,17 +8,31 @@ import Model exposing (..)
 
 previousVisitsOverviewPage : Model -> Html Msg
 previousVisitsOverviewPage model =
-    div [ class "w-60-ns center" ]
-        ([ h1 [ class "tc f1" ] [ text "Your visits" ] ] ++ visitContent model)
+    div [ class "center ma0 pa0" ]
+        -- [ div [ class "h4 bb b--black-10 listOfVisits pt4 v-mid bw2" ]
+        --     [ p [ class "ma0 tc f3 b brand" ] [ text "Your visits" ] ]
+        [ div [ class "w-100 flex h4 bb b--black-10 listOfVisits v-mid bw2 pt2 " ]
+            [ img [ class "pa3 h2", onClick GoBack, src "./assets/back_btn.svg" ] []
+            , p [ class "ma0 tc mt3 ml5 f3 b brand" ] [ text "Your visits" ]
+            ]
+        , div
+            []
+            (visitContent
+                model
+            )
+        ]
 
 
 visitItem : Feedback -> Html Msg
 visitItem feedback =
-    button [ onClick <| SelectVisitItem feedback ]
-        [ li [ class "db ma3" ]
-            [ p [ class "dib" ] [ text "#6574532" ]
-            , img [ src "./assets/mic.svg" ] []
-            , img [ src "./assets/write.svg" ] []
+    button [ class "w-100", onClick <| SelectVisitItem feedback ]
+        [ div [ class "" ]
+            [ li [ class "db flex bb bw2 b--black-10" ]
+                [ p [ class "" ] [ text "Today" ]
+                , p [ class "center f4 pt2" ] [ text feedback.familyId ]
+                , img [ src "./assets/mic.svg", class "w2" ] []
+                , img [ src "./assets/write.svg", class "w2" ] []
+                ]
             ]
         ]
 

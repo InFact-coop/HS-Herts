@@ -22,9 +22,12 @@ initModel =
 
 listOfFeedbacks : List Feedback
 listOfFeedbacks =
-    [ Feedback "Milner, #546783920" 1 (Just "Good visit") Nothing 3
-    , Feedback "Smith, #976783920" 2 (Just "The dad was not there") Nothing 3
-    , Feedback "Campbell, #897783920" 3 (Just "They offered me a cup of tea") Nothing 5
+    [ Feedback "Milner, #5467839" 1 (Just "Good visit") Nothing 3
+    , Feedback "Smith, #9767839" 2 (Just "The dad was not there") Nothing 3
+    , Feedback "Campbell, #897839" 3 (Just "They offered me a cup of tea") Nothing 5
+    , Feedback "Ford, #9768599" 7 (Just "I had a very good time") Nothing 3
+    , Feedback "Harris, #8977839" 8 (Just "The grandmother was here") Nothing 5
+    , Feedback "Peng, #897839" 9 (Just "I didn't have a nice time") Nothing 5
     ]
 
 

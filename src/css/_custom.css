@@ -92,6 +92,14 @@ button {
   height: 3rem;
 }
 
+.listOfVisits {
+  background-color: #F7F9F9;
+}
+
+.w2 {
+  width: 3rem;
+}
+
 /*MAVIS' Changes*/
 .flash {
   -webkit-animation: flash 1.5s infinite;
