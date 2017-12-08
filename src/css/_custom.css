@@ -13,14 +13,8 @@ button {
   font-family: var(--sans-serif);
 }
 
-.startVisit {
-  border: 2px solid var(--brand-orange);
-  border-radius: 2rem;
-}
-
 .prevVisits {
   border: 2px solid var(--brand-pink);
-  border-radius: 2rem;
 }
 
 .brand {
@@ -58,13 +52,16 @@ button {
 }
 
 /*REBE's Changes*/
-.endVisit {
-  border: 2px solid #FFFFFF;
+.b-orange {
+  border: 2px solid var(--brand-orange);
 
+}
+.finish {
+    border: 2px solid #FFFFFF;
 }
 
 .br1 {
-  border-radius: 1.5rem;
+  border-radius: 2rem;
 }
 
 .w8 {
@@ -83,5 +80,10 @@ button {
 .pt10 {
   padding-top:12rem;
 }
+
+.h3 {
+  height: 3rem;
+}
+
 
 /*MAVIS' Changes*/
