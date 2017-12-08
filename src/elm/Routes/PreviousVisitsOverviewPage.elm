@@ -8,15 +8,17 @@ import Model exposing (..)
 
 previousVisitsOverviewPage : Model -> Html Msg
 previousVisitsOverviewPage model =
-    div [ class "w-60-ns center" ]
-        ([ h1 [ class "tc f1" ] [ text "Your visits" ] ] ++ visitContent model)
+    div [ class "center listOfVisits vh-100" ]
+        [ div [ class "tc center" ]
+            ([ p [ class "tc f4" ] [ text "Your visits" ] ] ++ visitContent model)
+        ]
 
 
 visitItem : Feedback -> Html Msg
 visitItem feedback =
     button [ onClick <| SelectVisitItem feedback ]
         [ li [ class "db ma3" ]
-            [ p [ class "dib" ] [ text "#6574532" ]
+            [ p [ class "" ] [ text "#6574532" ]
             , img [ src "./assets/mic.svg" ] []
             , img [ src "./assets/write.svg" ] []
             ]
