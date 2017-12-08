@@ -9,6 +9,7 @@ thankyouPage : Model -> Html Msg
 thankyouPage model =
     div [ class "w-60-ns center" ]
         [ p [ class "f3 w60 mh1 tc" ] [ text "Thank you for recording your visit, You're a star!" ]
-        , a [ href "#home" ] [ button [] [ text "Home" ] ]
-        , a [ href "#previousVisitsOverviewPage" ] [ button [] [ text "See my visits" ] ]
+        , p [ class "f3 w60 mh1 tc" ] [ text "Would you like home start to contact you about this visit?" ]
+        , a [ href "#home" ] [ button [] [ text "Yes please" ] ]
+        , a [ href "#home" ] [ button [] [ text "No thanks" ] ]
         ]
