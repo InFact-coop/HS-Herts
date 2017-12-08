@@ -16,7 +16,6 @@ button {
 .startVisit {
   border: 2px solid var(--brand-orange);
   border-radius: 2rem;
-  ;
   width: 13rem;
   height: 4.5rem;
 }
@@ -57,3 +56,7 @@ button {
     overflow: hidden;
   }
 }
+
+/*REBE's Changes*/
+
+/*MAVIS' Changes*/
