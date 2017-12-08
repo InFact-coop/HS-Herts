@@ -9,27 +9,28 @@ import Model exposing (..)
 previousVisitsItemPage : Model -> Html Msg
 previousVisitsItemPage model =
     let
-        feedbackTest =
+        feebackTextHtml =
             case model.liveFeedback.text of
-                Just string ->
-                    string
+                Just fbText ->
+                    div []
+                        [ h3 [] [ text "Notes" ]
+                        , p [] [ text fbText ]
+                        ]
 
                 Nothing ->
-                    ""
+                    div [] []
 
-        feedbackAudio =
+        feedbackAudioHtml =
             case model.liveFeedback.audio of
-                Just string ->
-                    string
+                Just audioUrl ->
+                    div [] [ audio [ controls True, id "audio", src audioUrl ] [] ]
 
                 Nothing ->
-                    ""
+                    div [] []
     in
-        div [ class "w-60-ns center" ]
-            [ button [] []
-            , h1 [] [ text model.liveFeedback.familyId ]
-            , h2 [] [ text "YESTERDAY" ]
-            , audio [ controls True, id "audio", src feedbackAudio ] []
-            , h3 [] [ text "Notes" ]
-            , p [] [ text feedbackTest ]
-            ]
+    div [ class "w-60-ns center" ]
+        [ button [] []
+        , h1 [] [ text model.liveFeedback.familyId ]
+        , feedbackAudioHtml
+        , feebackTextHtml
+        ]
