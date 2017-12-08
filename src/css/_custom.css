@@ -33,6 +33,11 @@ button {
   width: 13.13rem;
 }
 
+.bg--bp {
+  background-color: var(--brand-pink);
+  color: white;
+}
+
 .f3 {
   font-size: 1.8rem;
 }
@@ -91,3 +96,12 @@ b-pink {
 
 
 /*MAVIS' Changes*/
+.flash {
+  -webkit-animation: flash 1.5s infinite;
+}
+
+@-webkit-keyframes flash {
+  50% {
+    background-color: var(--brand-orange);
+  }
+}

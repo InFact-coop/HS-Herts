@@ -22,3 +22,6 @@ port recordStop : () -> Cmd msg
 
 
 port audioUrl : (String -> msg) -> Sub msg
+
+
+port playStart : Bool -> Cmd msg

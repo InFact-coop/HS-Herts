@@ -106,6 +106,19 @@ update msg model =
         StopAudio ->
             ( { model | isRecordingAudio = False }, recordStop () )
 
+        PlayAudio whichever ->
+            ( model, playStart whichever )
+
+        ReRecord ->
+            let
+                feedback =
+                    model.feedback
+
+                newFeedback =
+                    { feedback | audio = Nothing }
+            in
+            ( { model | feedback = newFeedback }, Cmd.none )
+
         SelectVisitItem currentFeedback ->
             let
                 command =
@@ -143,3 +156,6 @@ update msg model =
               }
             , command
             )
+
+        GoBack ->
+            ( model, Navigation.back 1 )

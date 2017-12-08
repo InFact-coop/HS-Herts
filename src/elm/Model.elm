@@ -80,3 +80,6 @@ type Msg
     | SelectVisitItem Feedback
     | UpdateTextFeedback String
     | FinishFeedback
+    | PlayAudio Bool
+    | GoBack
+    | ReRecord

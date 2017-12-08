@@ -19,14 +19,28 @@ audioMessagePage model =
 
         audioHtml =
             if exists then
-                audio [ controls True, id "audio", src audioSrc ] []
+                div []
+                    [ audio [ controls False, id "audio", src audioSrc ] []
+                    , button [ id "play-button", class buttonClass1, onClick <| PlayAudio True ] [ text "Listen Back" ]
+                    , button [ class buttonClass2, onClick ReRecord ] [ text "Record again" ]
+                    , a [ href "#stopVisitPage" ] [ button [ class "dim b pointer prevVisits f4 ma2  bg--bp white" ] [ text "Submit" ] ]
+                    ]
             else
-                div [] []
+                div []
+                    [ button [ onClick StartAudio, class buttonClass1, disabled model.isRecordingAudio ] [ text "Begin recording" ]
+                    , button [ onClick StopAudio, class buttonClass2, disabled <| not model.isRecordingAudio ] [ text "Finish recording" ]
+                    ]
     in
-    div [ class "w-60-ns center" ]
-        [ h1 [ class "tc f1" ] [ text "Record your message" ]
-        , button [ onClick StartAudio, disabled model.isRecordingAudio ] [ text "Start" ]
-        , button [ onClick StopAudio, disabled <| not model.isRecordingAudio ] [ text "Stop" ]
-        , a [ href "#stopVisitPage" ] [ button [] [ text "All done" ] ]
+    div [ class "w-60-ns center tc" ]
+        [ div [ class "w-100 tl ma2 pa2" ] [ img [ class "", onClick GoBack, src "./assets/back_btn.svg" ] [] ]
+        , img [ class "vh-25 mt4 mb3 pa3 br-100", classList [ ( "flash", model.isRecordingAudio ) ], src "./assets/mic.svg" ] []
         , audioHtml
         ]
+
+
+buttonClass1 =
+    "dim b pointer startVisit f4 ma2 bg-white brand"
+
+
+buttonClass2 =
+    "dim b pointer prevVisits f4 ma2 bg-white brand-pink"
