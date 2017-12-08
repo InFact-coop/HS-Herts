@@ -5,12 +5,12 @@ body {
      https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
      they aren't properly supported by all browsers yet so postcss turns them into normal css for you
   */
-  font-family: var(--sans-serif);
+  font-family: var(--custom-font);
   margin: 0;
 }
 
 button {
-  font-family: var(--sans-serif);
+  font-family: var(--custom-font);
 }
 
 .br-pink {
