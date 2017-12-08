@@ -110,3 +110,7 @@ button {
     background-color: var(--brand-orange);
   }
 }
+
+.vh-15 {
+  height: 15vh;
+}

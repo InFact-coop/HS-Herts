@@ -23,7 +23,7 @@ audioMessagePage model =
                     [ audio [ controls False, id "audio", src audioSrc ] []
                     , button [ id "play-button", class buttonClass1, onClick <| PlayAudio True ] [ text "Listen Back" ]
                     , button [ class buttonClass2, onClick ReRecord ] [ text "Record again" ]
-                    , a [ href "#stopVisitPage" ] [ button [ class "dim b pointer prevVisits f4 ma2  bg--bp white" ] [ text "Submit" ] ]
+                    , a [ href "#stopVisitPage" ] [ button [ class "dim b pointer w7 h8 br1 f4 ma2  bg--bp white" ] [ text "Submit" ] ]
                     ]
             else
                 div []
@@ -32,7 +32,7 @@ audioMessagePage model =
                     ]
     in
     div [ class "w-60-ns center tc" ]
-        [ div [ class "w-100 tl ma2 pa2" ] [ img [ class "", onClick GoBack, src "./assets/back_btn.svg" ] [] ]
+        [ div [ class "w-100 tl ma2 pa2" ] [ img [ class "h3", onClick GoBack, src "./assets/back_btn.svg" ] [] ]
         , img [ class "vh-25 mt4 mb3 pa3 br-100", classList [ ( "flash", model.isRecordingAudio ) ], src "./assets/mic.svg" ] []
         , audioHtml
         ]
