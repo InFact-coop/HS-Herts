@@ -13,7 +13,7 @@ button {
   font-family: var(--sans-serif);
 }
 
-.prevVisits {
+.br-pink {
   border: 2px solid var(--brand-pink);
 }
 
@@ -55,6 +55,10 @@ button {
 .b-orange {
   border: 2px solid var(--brand-orange);
 
+}
+
+b-pink {
+  border: 2px solid var(--brand-pink);
 }
 .finish {
     border: 2px solid #FFFFFF;
