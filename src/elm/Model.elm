@@ -8,7 +8,7 @@ import Navigation
 
 initModel : Model
 initModel =
-    { route = PreviousVisitsOverviewRoute
+    { route = HomeRoute
     , timerLength = 0
     , previousFeedback = listOfFeedbacks
     , feedback = Feedback "" 4 Nothing Nothing 0
