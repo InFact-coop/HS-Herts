@@ -10,4 +10,4 @@ convertToMin number =
         seconds =
             number % 60
     in
-        toString minutes ++ ":" ++ toString seconds
+    toString minutes ++ ":" ++ toString seconds
