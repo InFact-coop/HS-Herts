@@ -39,8 +39,8 @@ audioMessagePage model =
 
 
 buttonClass1 =
-    "dim b pointer startVisit f4 ma2 bg-white brand"
+    "dim b pointer b-orange br1 w7 h8 f4 ma2 bg-white brand"
 
 
 buttonClass2 =
-    "dim b pointer prevVisits f4 ma2 bg-white brand-pink"
+    "dim b pointer b-pink br1 w7 h8 f4 ma2 bg-white brand-pink"
