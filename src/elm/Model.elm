@@ -73,6 +73,7 @@ type Msg
     | IncrementTimer
     | StartVisit
     | StopVisit
+    | CancelVisit
     | RecieveAudio String
     | StartAudio
     | StopAudio
