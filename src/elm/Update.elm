@@ -64,6 +64,13 @@ update msg model =
             in
             ( { model | timerRunning = True, route = StartVisitRoute }, command )
 
+        CancelVisit ->
+            let
+                command =
+                    Navigation.newUrl "/"
+            in
+            ( { model | timerRunning = False, route = HomeRoute, timerLength = 0 }, command )
+
         StopVisit ->
             let
                 command =
