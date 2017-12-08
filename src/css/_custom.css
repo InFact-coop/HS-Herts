@@ -62,7 +62,7 @@ button {
 }
 
 .b-pink {
-  border: 2px solid var(--brand-pink);
+  border: 4px solid var(--brand-pink);
 }
 .finish {
   border: 2px solid #ffffff;
@@ -92,8 +92,13 @@ button {
   height: 3rem;
 }
 
+.circle {
+  height: 14rem;
+  width: 14rem;
+}
+
 .listOfVisits {
-  background-color: #F7F9F9;
+  background-color: #f7f9f9;
 }
 
 .w2 {
@@ -108,6 +113,20 @@ button {
 @-webkit-keyframes flash {
   50% {
     background-color: var(--brand-orange);
+  }
+}
+
+.rotate {
+  -webkit-animation: rotate 60s infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
   }
 }
 

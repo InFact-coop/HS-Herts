@@ -9,8 +9,8 @@ import Model exposing (..)
 
 startVisitPage : Model -> Html Msg
 startVisitPage model =
-    div [ class "w-60-ns center" ]
-        [ img [ class "center pt5 h5 ma0", src "./assets/logo.png" ] []
+    div [ class "w-60-ns center tc" ]
+        [ div [ class "mt5 dib ba bw2 br-100 pa2 pt3 b-pink circle" ] [ img [ class "h5 ma3 mt4 rotate", src "./assets/small_logo.png" ] [] ]
         , p [ class "brand f3 w60 mh1 tc pt4" ] [ text <| convertToMin model.timerLength ]
         , section [ class "center ma0 mt2 pt2" ]
             [ a [ href "#stopVisitQuestionPage", class "link" ] [ button [ class "br1 h3 w7 ma3 brand bg-white center db f4 b-orange" ] [ text "Finish my visit" ] ]
