@@ -16,13 +16,9 @@ button {
 .startVisit {
   border: 2px solid var(--brand-orange);
   border-radius: 2rem;
-  width: 13rem;
-  height: 4.5rem;
 }
 
 .prevVisits {
-  width: 13rem;
-  height: 4.5rem;
   border: 2px solid var(--brand-pink);
   border-radius: 2rem;
 }
@@ -33,6 +29,10 @@ button {
 
 .brand-pink {
   color: var(--brand-pink);
+}
+
+.bg-brand-pink {
+  background-color: var(--brand-pink);
 }
 
 .logo {
@@ -58,5 +58,30 @@ button {
 }
 
 /*REBE's Changes*/
+.endVisit {
+  border: 2px solid #FFFFFF;
+
+}
+
+.br1 {
+  border-radius: 1.5rem;
+}
+
+.w8 {
+  width: 15rem;
+}
+.h8 {
+  height: 4.5rem;
+
+}
+.w7 {
+  width: 13rem;
+}
+.h7 {
+  height: 3rem;
+}
+.pt10 {
+  padding-top:12rem;
+}
 
 /*MAVIS' Changes*/
