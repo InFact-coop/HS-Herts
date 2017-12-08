@@ -59,14 +59,13 @@ button {
 /*REBE's Changes*/
 .b-orange {
   border: 2px solid var(--brand-orange);
-
 }
 
-b-pink {
+.b-pink {
   border: 2px solid var(--brand-pink);
 }
 .finish {
-    border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
 }
 
 .br1 {
@@ -78,7 +77,6 @@ b-pink {
 }
 .h8 {
   height: 4.5rem;
-
 }
 .w7 {
   width: 13rem;
@@ -87,13 +85,12 @@ b-pink {
   height: 3rem;
 }
 .pt10 {
-  padding-top:12rem;
+  padding-top: 12rem;
 }
 
 .h3 {
   height: 3rem;
 }
-
 
 /*MAVIS' Changes*/
 .flash {
