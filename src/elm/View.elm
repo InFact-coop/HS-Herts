@@ -8,14 +8,14 @@ import Routes.AudioMessagePage exposing (..)
 import Routes.Home exposing (..)
 import Routes.Navbar exposing (..)
 import Routes.NotFoundPage exposing (..)
-import Routes.PreviousVisitsPage exposing (..)
+import Routes.PreviousVisitsOverviewPage exposing (..)
+import Routes.PreviousVisitsItemPage exposing (..)
 import Routes.StartVisitPage exposing (..)
 import Routes.StopVisitQuestionPage exposing (..)
 import Routes.StopVisitPage exposing (..)
 import Routes.AudioMessagePage exposing (..)
 import Routes.TextMessagePage exposing (..)
 import Routes.ThankyouPage exposing (..)
-import Routes.ListOfVisitsPage exposing (..)
 
 
 view : Model -> Html Msg
@@ -41,14 +41,14 @@ view model =
                 TextMessageRoute ->
                     textMessagePage model
 
-                PreviousVisitsRoute ->
-                    previousVisitsPage model
+                PreviousVisitsOverviewRoute ->
+                    previousVisitsOverviewPage model
+
+                PreviousVisitsItemRoute ->
+                    previousVisitsItemPage model
 
                 ThankyouRoute ->
                     thankyouPage model
-
-                ListOfVisitsRoute ->
-                    listOfVisitsPage model
 
                 NotFoundRoute ->
                     notFoundPage model

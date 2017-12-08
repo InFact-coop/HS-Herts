@@ -13,6 +13,6 @@ home model =
         , p [ class "tc center brand f3" ] [ text "supporting our volunteers" ]
         , section [ class "center ma0 mt2 pt2" ]
             [ button [ class "ma3 brand bg-white center db f3 startVisit", onClick StartVisit ] [ text "Start my visit" ]
-            , a [ href "#previousVisitsPage", class "link" ] [ button [ class "ma3 brand-pink bg-white center db f3 prevVisits" ] [ text "Go to visits" ] ]
+            , a [ href "#previousVisitsOverviewPage", class "link" ] [ button [ class "ma3 brand-pink bg-white center db f3 prevVisits" ] [ text "Go to visits" ] ]
             ]
         ]
