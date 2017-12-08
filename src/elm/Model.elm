@@ -8,10 +8,10 @@ import Navigation
 
 initModel : Model
 initModel =
-    { route = HomeRoute
+    { route = ThankyouRoute
     , timerLength = 0
     , previousFeedback = listOfFeedbacks
-    , feedback = Feedback "" 4 Nothing Nothing 0
+    , feedback = Feedback "#3456787" 4 Nothing Nothing 0
     , isMenuOpen = False
     , timerRunning = False
     , isRecordingAudio = False
@@ -22,12 +22,12 @@ initModel =
 
 listOfFeedbacks : List Feedback
 listOfFeedbacks =
-    [ Feedback "Milner, #5467839" 1 (Just "Good visit") Nothing 3
-    , Feedback "Smith, #9767839" 2 (Just "The dad was not there") Nothing 3
-    , Feedback "Campbell, #897839" 3 (Just "They offered me a cup of tea") Nothing 5
-    , Feedback "Ford, #9768599" 7 (Just "I had a very good time") Nothing 3
-    , Feedback "Harris, #8977839" 8 (Just "The grandmother was here") Nothing 5
-    , Feedback "Peng, #897839" 9 (Just "I didn't have a nice time") Nothing 5
+    [ Feedback "#5467839" 1 (Just "Good visit") Nothing 3
+    , Feedback "#9767839" 2 (Just "The dad was not there") Nothing 3
+    , Feedback "#897839" 3 (Just "They offered me a cup of tea") Nothing 5
+    , Feedback "#9768599" 7 (Just "I had a very good time") Nothing 3
+    , Feedback "#8977839" 8 (Just "The grandmother was here") Nothing 5
+    , Feedback "#897839" 9 (Just "I didn't have a nice time") Nothing 5
     ]
 
 

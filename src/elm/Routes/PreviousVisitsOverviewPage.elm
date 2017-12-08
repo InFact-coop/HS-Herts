@@ -30,7 +30,7 @@ visitItem feedback =
             [ li [ class "db flex bb bw2 b--black-10" ]
                 [ p [ class "" ] [ text "Today" ]
                 , p [ class "center f4 pt2" ] [ text feedback.familyId ]
-                , img [ src "./assets/mic.svg", class "w2" ] []
+                , img [ src "./assets/mic.svg", class "w2 pr1" ] []
                 , img [ src "./assets/write.svg", class "w2" ] []
                 ]
             ]

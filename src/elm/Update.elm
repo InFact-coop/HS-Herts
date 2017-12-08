@@ -62,14 +62,14 @@ update msg model =
                 command =
                     Navigation.newUrl "#startVisitPage"
             in
-            ( { model | timerRunning = True, route = StartVisitRoute }, command )
+                ( { model | timerRunning = True, route = StartVisitRoute }, command )
 
         CancelVisit ->
             let
                 command =
                     Navigation.newUrl "/"
             in
-            ( { model | timerRunning = False, route = HomeRoute, timerLength = 0 }, command )
+                ( { model | timerRunning = False, route = HomeRoute, timerLength = 0 }, command )
 
         StopVisit ->
             let
@@ -80,15 +80,15 @@ update msg model =
                     model.feedback
 
                 newFeedback =
-                    { feedback | lengthOfVisit = model.timerLength }
+                    { feedback | lengthOfVisit = model.timerLength, feedbackId = model.feedbackCount }
             in
-            ( { model
-                | timerRunning = False
-                , feedback = newFeedback
-                , route = StopVisitRoute
-              }
-            , command
-            )
+                ( { model
+                    | timerRunning = False
+                    , feedback = newFeedback
+                    , route = StopVisitRoute
+                  }
+                , command
+                )
 
         RecieveAudio audioUrl ->
             let
@@ -98,7 +98,7 @@ update msg model =
                 newFeedback =
                     { feedback | audio = Just audioUrl }
             in
-            ( { model | feedback = newFeedback }, Cmd.none )
+                ( { model | feedback = newFeedback }, Cmd.none )
 
         StartAudio ->
             ( { model | isRecordingAudio = True }, recordStart () )
@@ -117,14 +117,14 @@ update msg model =
                 newFeedback =
                     { feedback | audio = Nothing }
             in
-            ( { model | feedback = newFeedback }, Cmd.none )
+                ( { model | feedback = newFeedback }, Cmd.none )
 
         SelectVisitItem currentFeedback ->
             let
                 command =
                     Navigation.newUrl "#previousVisitsItemPage"
             in
-            ( { model | liveFeedback = currentFeedback }, command )
+                ( { model | liveFeedback = currentFeedback }, command )
 
         UpdateTextFeedback textFeedback ->
             let
@@ -134,7 +134,7 @@ update msg model =
                 newFeedback =
                     { feedback | text = Just textFeedback }
             in
-            ( { model | feedback = newFeedback }, Cmd.none )
+                ( { model | feedback = newFeedback }, Cmd.none )
 
         FinishFeedback ->
             let
@@ -147,15 +147,15 @@ update msg model =
                 updatedFeedbackList =
                     [ model.feedback ] ++ model.previousFeedback
             in
-            ( { model
-                | feedback = resetFb
-                , route = ThankyouRoute
-                , previousFeedback = updatedFeedbackList
-                , feedbackCount = model.feedbackCount + 1
-                , timerLength = 0
-              }
-            , command
-            )
+                ( { model
+                    | feedback = resetFb
+                    , route = ThankyouRoute
+                    , previousFeedback = updatedFeedbackList
+                    , feedbackCount = model.feedbackCount + 1
+                    , timerLength = 0
+                  }
+                , command
+                )
 
         GoBack ->
             ( model, Navigation.back 1 )
