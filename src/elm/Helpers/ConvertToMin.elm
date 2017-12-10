@@ -9,5 +9,17 @@ convertToMin number =
 
         seconds =
             number % 60
+
+        formatMin =
+            if minutes < 10 then
+                "0" ++ toString minutes
+            else
+                toString minutes
+
+        formatSec =
+            if seconds < 10 then
+                "0" ++ toString seconds
+            else
+                toString seconds
     in
-    toString minutes ++ ":" ++ toString seconds
+    formatMin ++ ":" ++ formatSec
